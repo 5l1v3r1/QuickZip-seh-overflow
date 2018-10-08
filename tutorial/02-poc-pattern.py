@@ -8,6 +8,7 @@
 # Updated: October 2018
 
 from os import remove
+from sys import exit
 
 
 filename = "corelanboom.zip"
@@ -105,6 +106,7 @@ if payload_len != 4068:
             payload_len=payload_len, target_len=target_len
         )
     )
+    exit(1)
 
 print("[*] Size : {length} bytes".format(length=payload_len))
 print("[*] Removing old {filename} file".format(filename=filename))
