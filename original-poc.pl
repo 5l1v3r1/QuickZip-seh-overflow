@@ -1,3 +1,4 @@
+#!/usr/bin/env perl
 # Author : corelanc0d3r
 # http://www.corelan.be:8800
 # March 2010
